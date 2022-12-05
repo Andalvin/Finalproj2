@@ -25,7 +25,7 @@
             return null;
         }
         var map, animation;
-        //Initialize a map instance.
+        
         map = new atlas.Map('myMap', {
             center: [-122.33, 47.6],
             zoom: 9,
@@ -47,14 +47,14 @@
             }
         });
 
-        //Wait until the map resources are ready.
+       
         map.events.add('ready', function () {
 
-            //Create a data source and add it to the map.
+            
             datasource = new atlas.source.DataSource();
             map.sources.add(datasource);
 
-            //Add a layer for rendering point data.
+           
             var resultLayer = new atlas.layer.SymbolLayer(datasource, null, {
                 iconOptions: {
                     image: 'pin-round-darkblue',
@@ -85,10 +85,10 @@
                     //Grab the opacity from the shape. Opacity will be used to hide the shape when progress of the animation is 0.
                     //  opacity: ['get', 'opacity'],
 
-                    //For smoother animation, ignore the placement of the icon. This skips the label collision calculations and allows the icon to overlap map labels.
+                   
                     ignorePlacement: true,
 
-                    //For smoother animation, allow symbol to overlap all other symbols on the map.
+                   
                     allowOverlap: true
                 }
             }));
